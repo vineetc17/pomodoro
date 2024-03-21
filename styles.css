@@ -21,7 +21,7 @@ body{
     width: min(90%,500px);
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 30%;
+    margin-top: 15%;
     left: 50%;
     padding: 3.5em 2em;
     border-radius: 0.5em;
@@ -111,6 +111,6 @@ button{
     font-size: 1em;
     color: #FFFFFF;
     position: absolute;
-    top:52%;
+    margin-top:25%;
     left:46%;
 }
