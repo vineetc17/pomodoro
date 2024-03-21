@@ -81,6 +81,17 @@ button{
     box-shadow: 0 4px 0 0 #EBEBEB;
 }
 
+#btn-start:hover, #btn-pause:hover{
+        background-color: #c2d8ed;
+}
+
+#btn-start:active, #btn-pause:active{
+    background-color: #c2d8ed;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
 #btn-reset,#btn-forward{
     background: transparent;
     color: #FFFFFF;
