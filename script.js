@@ -25,6 +25,9 @@ const appendZero = (value) => {
     return value;
 };
 
+var audio = new Audio("click.mp3");
+var audio2 = new Audio("end.mp3");
+
 resetButton.addEventListener("click", 
     (resetTime = () => {
         countdownFinished = false;
@@ -92,6 +95,8 @@ longBreakButton.addEventListener("click", () => {
 
 pauseButton.addEventListener("click", 
     (pauseTimer = () =>{
+        audio.currentTime = -10^5;
+        audio.play();
         paused = true;
         clearInterval(set);
         startButton.classList.remove("hide");
@@ -103,6 +108,8 @@ pauseButton.addEventListener("click",
 
 startButton.addEventListener("click",
     () => {
+        audio.currentTime = -10^5;
+        audio.play();
         pauseButton.classList.add("show");
         resetButton.classList.add("show");
         forwardButton.classList.add("show");
@@ -117,6 +124,9 @@ startButton.addEventListener("click",
                 count--;
                 time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
 
+                if(count<=17 && minCount==0 && !countdownFinished){
+                    audio2.play();
+                }
                 if(count==0){
                     if(minCount != 0){
                         minCount--;
