@@ -25,8 +25,6 @@ const appendZero = (value) => {
     return value;
 };
 
-const audio = new Audio("click.mp3");
-
 resetButton.addEventListener("click", 
     (resetTime = () => {
         countdownFinished = false;
@@ -94,8 +92,6 @@ longBreakButton.addEventListener("click", () => {
 
 pauseButton.addEventListener("click", 
     (pauseTimer = () =>{
-        audio.currentTime = -10^5;
-        audio.play();
         paused = true;
         clearInterval(set);
         startButton.classList.remove("hide");
@@ -107,8 +103,6 @@ pauseButton.addEventListener("click",
 
 startButton.addEventListener("click",
     () => {
-        audio.currentTime = -10^5;
-        audio.play();
         pauseButton.classList.add("show");
         resetButton.classList.add("show");
         forwardButton.classList.add("show");
